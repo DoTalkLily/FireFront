@@ -1,0 +1,27 @@
+[
+  {
+    "id": 124,
+    "name": "王教练",
+    "gender":"男",
+    "order":"124",
+    "position":"1公里",
+    "profile_image_url": "image/pic.jpg",
+    "verified": [
+      "瑜伽二级教练"
+    ],
+    "hours": 20,
+    "city": "北京",
+    "description": "好教练不解释",
+    "categories": [
+      "瑜伽",
+      "健身"
+    ],
+    "sports": [
+      "办公室瑜伽",
+      "瑜伽私教"
+    ],
+    "available_areas": [
+      "朝阳区"
+    ]
+  }
+]
