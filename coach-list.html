@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>燃点</title>
+	<link rel="stylesheet" href="css/common/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/coach.css">
+</head>
+<body>
+<div data-role="page">
+  <div data-="content" ng-app="coach" ng-controller="getCoachList">
+      <ul data-role="listview" data-inset="true" id="coach-list">
+      <li  ng-repeat="coach in coaches">
+                  <a href="coach-detail.html?id={{coach.id}}" data-ajax="false" data-transition="slide">
+                  <img src="{{coach.profile_image_url}}"/>
+                  <span>{{coach.name}}</span>
+                  <span class="gender">{{getGender(coach.sex)}}</span>
+                  <span class="position">{{coach.position}}</span><br/>
+                  <span>{{coach.orderCount}}单</span>
+                  <span class="position">位置：<span ng-repeat="area in coach.available_areas">{{area}}</span></span><br/>
+                  <span  ng-repeat="title in coach.verified">{{title}}</span>
+                  <span class="description">{{trimDescription(coach.description)}}</span>
+              </a>
+      </li>
+      </ul>
+  </div>
+  <div data-role="footer" data-position="fixed">
+       <div data-role="navbar">
+          <ul>
+            <li><a href="index.html" data-icon="home" >首页</a></li>
+            <li><a href="coach-list.html" data-icon="eye" class="ui-btn-active">教练</a></li>
+            <li><a href="#" data-icon="bullets">订单</a></li>
+            <li><a href="#" data-icon="user">我的</a></li>
+          </ul>
+      </div>
+  </div>
+</div>
+<script src="js/common/jquery-2.1.3.min.js"></script>
+<script src="js/common/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/common/angular.min.js"></script>
+<script src="js/common/angular-route.min.js"></script>
+<script src="js/coach.js"></script>
+</body>
+</html>
