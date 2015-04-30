@@ -13,13 +13,13 @@
       <ul data-role="listview" data-inset="true" id="coach-list">
       <li  ng-repeat="coach in coaches">
                   <a href="coach-detail.html?id={{coach.id}}" data-ajax="false" data-transition="slide">
-                  <img src="{{coach.profile_image_url}}"/>
+                  <img ng-src="{{coach.profile_image_url}}"/>
                   <span>{{coach.name}}</span>
                   <span class="gender">{{getGender(coach.sex)}}</span>
-                  <span class="position">{{coach.position}}</span><br/>
-                  <span>{{coach.orderCount}}单</span>
-                  <span class="position">位置：<span ng-repeat="area in coach.available_areas">{{area}}</span></span><br/>
-                  <span  ng-repeat="title in coach.verified">{{title}}</span>
+                  <span class="position">{{coach.distance}}公里</span><br/>
+                  <span>{{coach.order_num}}单</span>
+                  <span class="position">位置：<span>{{coach.available_areas}}</span></span><br/>
+                  <span ng-repeat="category in coach.categories">{{category.name}}</span>
                   <span class="description">{{trimDescription(coach.description)}}</span>
               </a>
       </li>

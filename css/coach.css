@@ -4,6 +4,9 @@
 #coach-list a{
     line-height: 1.6em;
 }
+#coach-detail span{
+    line-height: 2.4em;
+}
 #coach-list a img{
     left: 10px;
     top: 8px;
@@ -13,4 +16,62 @@
 }
 .gender{
     margin-left: 1em;
+}
+#info-panel img{
+    margin: 1em 1em 0;
+    float: left;
+}
+#info-panel .info-detail{
+   float: left;margin-top: 1em;
+}
+#info-panel p{
+    margin: .3em 0;
+}
+#info-panel{
+    min-height: 6em;
+    font-weight: bold;
+    border: 1px solid #bbb;
+}
+#info-panel .category{
+    clear: both;
+    margin-left: 1em;
+}
+#comment{
+   color: #333;
+    margin-top: 1em;
+    border: 1px solid #bbb;
+    font-weight: bold;
+    line-height: 3em;
+    padding-left: 1em;
+    padding-right: 1em;
+}
+.reputation{
+    float: right;
+}
+#description{
+    margin-top: 1em;
+    padding-left: 1em;
+    padding-top: 1em;
+    font-weight: bold;
+    border: 1px solid #bbb;
+}
+#description p{
+    text-indent: 1em;
+}
+#coach-list{
+    display: none;
+}
+#coach-detail{
+    display: none;
+}
+#coach-detail li{
+    margin-bottom: 1em;
+}
+#coach-detail .ui-checkbox{
+    float: right;
+    margin-right: 2em;
+    margin-top: 0;
+}
+#coach-detail div{
+    background-color: #ffffff;
 }

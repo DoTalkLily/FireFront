@@ -13,21 +13,33 @@
         <a href="coach-list.html" data-icon="arrow-l" data-ajax="false" data-transition="slide" data-direction="reverse">返回</a>
         <h1>教练详情</h1>
     </div>
-    <div data-="content" ng-app="coach" ng-controller="getCoachDetail">
-        <ul data-role="listview" data-inset="true"  id="coach-detail">
-      <li  ng-repeat="coach in coaches">
-              <a href="coach-detail.html?id={{coach.id}}">
-                  <img src="{{coach.profile_image_url}}"/>
-                  <span>{{coach.name}}</span>
-                  <span class="gender">{{getGender(coach.sex)}}</span>
-                  <span class="position">{{coach.position}}</span><br/>
-                  <span>{{coach.orderCount}}单</span>
-                  <span class="position">位置：<span ng-repeat="area in coach.available_areas">{{area}}</span></span><br/>
-                  <span  ng-repeat="title in coach.verified">{{title}}</span>
-                  <span class="description">{{coach.description}}</span>
-              </a>
+    <div data-="content" ng-app="coach" ng-controller="getCoachDetail" id="coach-detail">
+        <div id="info-panel">
+            <img ng-src="{{coach.profile_image_url}}"/>
+            <div class="info-detail">
+                <p>{{coach.name}} <span class="gender">{{getGender(coach.sex)}}</span></p>
+                <p>{{coach.order_num}}单</p>
+                <p class="position">授课区域：{{coach.available_areas}}</p>
+            </div>
+            <div class="category" ng-repeat="category in coach.categories">{{category.name}}</div>
+        </div>
+        <div id="comment">
+            <span>全部评价{{coach.reputation_num}}条</span><span class="reputation">{{coach.positive_reputation}}好评</span>
+        </div>
+        <div id="description">
+            <span>个人简介</span>
+            <p>{{coach.description}}</p>
+        </div>
+        <ul data-role="listview" data-inset="true" class="sports">
+      <li  ng-repeat="sport in coach.sports" data-icon="false" data-iconpos="right">
+              <img ng-src="{{sport.head_image_url}}"/>
+              <span>{{sport.name}}</span>
+              <span>{{sport.coach_price}}元</span><br/>
+              <span>{{sport.duration}}分钟</span>
+              <input type="checkbox" name="sport" value="{{sport.id}}">
       </li>
-      </ul>
+       </ul>
+       <a href="#" class="ui-btn ui-btn-b" id="order-btn">预约下单</a>
   </div>
   <div data-role="footer" data-position="fixed">
        <div data-role="navbar">

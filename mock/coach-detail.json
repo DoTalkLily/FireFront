@@ -1,20 +1,45 @@
-[
-  {
-    "description": "blablablablablablablablablablablablablabla",
-    "hours_class": 20.5,
-    "id": 1,
-    "name": "zhagnsan",
-    "orderCount": 124,
-    "profile_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff",
-    "sex": 1,
-    "verified": [
-      "二级瑜伽教练"
-    ],
-    "categories":["瑜伽", "健身"],
-    "available_areas": [
-      "wudaokou"
-    ],
-    "city": "北京",
-    "location": "longitude: 0.0, latitude: 0.0"
-  }
-]
+{
+  "available_areas": "朝阳区",
+  "created_at": "2015-04-27T14:15:16Z",
+  "description": "就是这么一位安静的教练。",
+  "hours_class": "20.5",
+  "id": 1,
+  "name": "张三",
+  "order_num": 20,
+  "positive_reputation": "90%",
+  "profile_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff",
+  "reputation_num": 19,
+  "sex": 1,
+  "updated_at": "2015-04-27T14:15:16Z",
+  "verified": "瑜伽二级教练 健身我也会",
+  "categories": [
+    {
+      "name": "瑜伽"
+    }
+  ],
+  "sports": [
+    {
+      "duration": 30,
+      "id": 1,
+      "name": "办公室瑜伽",
+      "head_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff",
+      "coach_price": "140.8"
+    },
+    {
+      "duration": 120,
+      "id": 2,
+      "name": "家庭瑜伽",
+      "head_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff",
+      "coach_price": "283.8"
+    },
+    {
+      "duration": 60,
+      "id": 3,
+      "name": "瑜伽私教",
+      "head_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff",
+      "coach_price": "173.8"
+    }
+  ],
+  "city": "北京",
+  "location": "longitude: 0.0, latitude: 0.0"
+}
