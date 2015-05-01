@@ -9,21 +9,20 @@
 </head>
 <body>
     <div data-role="header">
-        <a href="coach-list.html" data-icon="arrow-l" data-ajax="false" data-transition="slide" data-direction="reverse">返回</a>
-        <h1>教练详情</h1>
+        <a href="sport-list.html" data-icon="arrow-l" data-ajax="false" data-transition="slide" data-direction="reverse">返回</a>
+        <h1>项目详情</h1>
     </div>
-    <div data-role="content" ng-app="coach" ng-controller="getCoachDetail" id="coach-detail">
+    <div data-role="content" ng-app="sport" ng-controller="getSportDetail" id="sport-detail">
         <div id="info-panel">
-            <img ng-src="{{coach.profile_image_url}}"/>
+            <img ng-src="{{sport.head_image_url}}"/>
             <div class="info-detail">
-                <p>{{coach.name}} <span class="gender">{{getGender(coach.sex)}}</span></p>
-                <p>{{coach.order_num}}单</p>
-                <p class="position">授课区域：{{coach.available_areas}}</p>
+                <p>{{sport.name}} <span class="price">￥{{sport.price}}元</span></p>
+                <p>{{sport.duration}}分钟<span>建议人数：{{getNumLimit(sport.max_user_num,sport.min_user_num)}}</span></p>
             </div>
             <div class="category" ng-repeat="category in coach.categories">{{category.name}}</div>
         </div>
-        <div id="comment">
-            <span>全部评价{{coach.reputation_num}}条</span><span class="reputation">{{coach.positive_reputation}}好评</span>
+        <div id="purchase-num">
+            <span>购买数量</span><span class="reputation"></span>
         </div>
         <div id="description">
             <span>个人简介</span>
@@ -43,8 +42,8 @@
   <div data-role="footer" data-position="fixed">
        <div data-role="navbar">
           <ul>
-            <li><a href="index.html" data-icon="home" >首页</a></li>
-            <li><a href="coach-list.html" data-icon="eye" class="ui-btn-active">教练</a></li>
+            <li><a href="index.html" data-icon="home"  class="ui-btn-active">首页</a></li>
+            <li><a href="coach-list.html" data-icon="eye">教练</a></li>
             <li><a href="#" data-icon="bullets">订单</a></li>
             <li><a href="#" data-icon="user">我的</a></li>
           </ul>
@@ -55,6 +54,6 @@
 <script src="js/common/angular.min.js"></script>
 <script src="js/common/angular-route.min.js"></script>
 <script src="js/common/utils.js"></script>
-<script src="js/coach.js"></script>
+<script src="js/sport.js"></script>
 </body>
 </html>

@@ -75,3 +75,10 @@
 #coach-detail div{
     background-color: #ffffff;
 }
+#sports li img{
+    left: 10px;
+    top: 8px;
+}
+#coach-detail{
+    padding: .3em;
+}

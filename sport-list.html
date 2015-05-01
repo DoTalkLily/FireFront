@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>燃点</title>
+	<link rel="stylesheet" href="css/common/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/sport.css">
+</head>
+<body>
+  <div data-role="page" ng-app="sport" ng-controller="getSportList">
+      <ul data-role="listview" data-inset="true" id="sport-list">
+          <li ng-repeat="sport in sports" data-icon="false">
+              <a href="sport-detail.html?id={{sport.id}}" data-ajax="false" data-transition="slide">
+                  <img ng-src="{{sport.head_image_url}}"/>
+                  <span>{{sport.name}}</span><span class="price">￥{{sport.price}}元</span><br/><span class="time">{{sport.duration}}分钟</span>
+                  <button data-mini="true">立刻预约</button>
+              </a>
+      </li>
+      </ul>
+      <div data-role="footer" data-position="fixed">
+          <div data-role="navbar">
+              <ul>
+                  <li><a href="index.html" data-icon="home" class="ui-btn-active">首页</a></li>
+                  <li><a href="coach-list.html" data-icon="eye">教练</a></li>
+                  <li><a href="#" data-icon="bullets">订单</a></li>
+                  <li><a href="#" data-icon="user">我的</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+
+<script src="js/common/jquery-2.1.3.min.js"></script>
+<script src="js/common/jquery.mobile-1.4.5.min.js"></script>
+<script src="js/common/angular.min.js"></script>
+<script src="js/common/angular-route.min.js"></script>
+<script src="js/common/utils.js"></script>
+<script src="js/sport.js"></script>
+</body>
+</html>
