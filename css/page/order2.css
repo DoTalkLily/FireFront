@@ -1,0 +1,159 @@
+@import url("../module/order-step.css");
+@import url("../module/order-bottom.css");
+
+/*头部提示*/
+.top-tip {
+  margin: 2px 5px 0;
+  line-height: 34px;
+  padding: 0 6px;
+  font-size: 10px;
+  color: #333333;
+  background-color: #f4f4f4;
+  border-radius: 3px;
+}
+
+.top-tip i {
+  margin-right: 6px;
+}
+
+/*日期选择*/
+.date-bar {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.date-item,
+.date-separate {
+  display: inline-block;
+}
+
+.date-item {
+  height: 40px;
+  line-height: 40px;
+  font-size: 10px;
+  text-align: center;
+  margin: 0 -4px;
+}
+
+.date-item-light {
+  color: #ffffff;
+  font-size: 12px;
+  width: 39px;
+  background: url("../../image/pebble.png") no-repeat center center / 39px 40px;
+}
+
+.date-separate {
+  width: 6.4%;
+  height: 1px;
+  background-color: #000000;
+  vertical-align: 3px;
+}
+
+/*时间选择*/
+.time-list {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.time-list li {
+  display: inline-block;
+  width: 20.31%;
+}
+
+.time-item {
+  width: 39px;
+  height: 40px;
+  line-height: 40px;
+  margin: 14px 13px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  background: url("../../image/pebble_dot_gray.png") no-repeat center center / 39px 40px;
+}
+
+.time-item-light {
+  color: #ffffff;
+  background: url("../../image/pebble_dot.png") no-repeat center center / 39px 40px;
+}
+
+/*教练选择*/
+.coach-list {
+  margin: 1px 5px 10px;
+}
+
+.coach-item {
+  height: 93px;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.coach-check {
+  float: right;
+  width: 73px;
+  height: 93px;
+  line-height: 93px;
+  text-align: center;
+  background-color: #fcfcfc;
+}
+
+.i-check {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../../image/tick-circle.png") no-repeat center center / 20px 20px;
+  vertical-align: middle;
+}
+
+.coach-info {
+  margin-right: 80px;
+}
+
+.coach-avatar {
+  float: left;
+  width: 70px;
+  height: 72px;
+  margin: 10px 0 0 9px;
+  position: relative;
+}
+
+.coach-pic {
+  position: absolute;
+  width: 70px;
+}
+
+.coach-frame {
+  position: absolute;
+  width: 70px;
+}
+
+.coach-main {
+  overflow: hidden;
+  margin-left: 97px;
+}
+
+.coach-title {
+  font-size: 12px;
+  margin-top: 8px;
+}
+
+.coach-sex {
+  margin-left: 14px;
+}
+
+.coach-desc {
+  margin-top: 2px;
+  font-size: 10px;
+  line-height: 14px;
+  max-height: 28px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.coach-tags {
+  margin-top: 18px;
+  font-size: 8px;
+  color: #666666;
+}

@@ -1,48 +1,68 @@
 /**
  * Created by li.lli on 2015/4/25.
  */
-//»ñÈ¡urlÖĞµÄ²ÎÊı
+//è·å–urlä¸­çš„å‚æ•°
 function getUrlParam(name) {
-    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //¹¹ÔìÒ»¸öº¬ÓĞÄ¿±ê²ÎÊıµÄÕıÔò±í´ïÊ½¶ÔÏó
-    var r = window.location.search.substr(1).match(reg);  //Æ¥ÅäÄ¿±ê²ÎÊı
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //æ„é€ ä¸€ä¸ªå«æœ‰ç›®æ ‡å‚æ•°çš„æ­£åˆ™è¡¨è¾¾å¼å¯¹è±¡
+    var r = window.location.search.substr(1).match(reg);  //åŒ¹é…ç›®æ ‡å‚æ•°
     if (r != null) return unescape(r[2]);
-    return null; //·µ»Ø²ÎÊıÖµ
+    return null; //è¿”å›å‚æ•°å€¼
+}
+//æˆªæ–­å­—ç¬¦ä¸²
+function trim(description,len){
+    return description && description.length > len ? description.substr(0, len) : description;
 }
 /**
- * Ä£·ÂandroidÀïÃæµÄToastĞ§¹û£¬Ö÷ÒªÊÇÓÃÓÚÔÚ²»´ò¶Ï³ÌĞòÕı³£Ö´ĞĞµÄÇé¿öÏÂÏÔÊ¾ÌáÊ¾Êı¾İ
+ * æ¨¡ä»¿androidé‡Œé¢çš„Toastæ•ˆæœï¼Œä¸»è¦æ˜¯ç”¨äºåœ¨ä¸æ‰“æ–­ç¨‹åºæ­£å¸¸æ‰§è¡Œçš„æƒ…å†µä¸‹æ˜¾ç¤ºæç¤ºæ•°æ®
  * @param config
  * @return
  */
 var Toast = function(config){
     this.msgEntity;
-    this.context = config.context==null?$('body'):config.context;//ÉÏÏÂÎÄ
-    this.message = config.message;//ÏÔÊ¾ÄÚÈİ
-    this.time = config.time==null?3000:config.time;//³ÖĞøÊ±¼ä
-    this.left = config.left;//¾àÈİÆ÷×ó±ßµÄ¾àÀë
-    this.top = config.top;//¾àÈİÆ÷ÉÏ·½µÄ¾àÀë
+    this.context = config.context==null?$('body'):config.context;//ä¸Šä¸‹æ–‡
+    this.message = config.message;//æ˜¾ç¤ºå†…å®¹
+    this.time = config.time==null?3000:config.time;//æŒç»­æ—¶é—´
+    this.left = config.left;//è·å®¹å™¨å·¦è¾¹çš„è·ç¦»
+    this.top = config.top;//è·å®¹å™¨ä¸Šæ–¹çš„è·ç¦»
     this.init();
 }
 
 Toast.prototype = {
-    //³õÊ¼»¯ÏÔÊ¾µÄÎ»ÖÃÄÚÈİµÈ
+    //åˆå§‹åŒ–æ˜¾ç¤ºçš„ä½ç½®å†…å®¹ç­‰
     init : function(){
         $("#toastMessage").remove();
-        //ÉèÖÃÏûÏ¢Ìå
+        //è®¾ç½®æ¶ˆæ¯ä½“
         var msgDIV = new Array();
         msgDIV.push('<div id="toastMessage" style="border-radius: 4px">');
         msgDIV.push('<span>'+this.message+'</span>');
         msgDIV.push('</div>');
         this.msgEntity = $(msgDIV.join('')).appendTo(this.context);
-        //ÉèÖÃÏûÏ¢ÑùÊ½
+        //è®¾ç½®æ¶ˆæ¯æ ·å¼
         var left = this.left == null ? this.context.width()/2-this.msgEntity.find('span').width()/2 : this.left;
         var top = this.top == null ? this.context.height()/2-this.msgEntity.find('span').height()/2  : this.top;
         this.msgEntity.css({position:'absolute',top:top,'z-index':'99',left:left,'background-color':'black',color:'white','font-size':'18px',padding:'10px',margin:'10px'});
         this.msgEntity.hide();
     },
-    //ÏÔÊ¾¶¯»­
+    //æ˜¾ç¤ºåŠ¨ç”»
     show :function(){
         this.msgEntity.fadeIn(this.time/2);
         this.msgEntity.fadeOut(this.time/2);
     }
-
 }
+//èœå•tabåˆ‡æ¢æ•ˆæœ
+$(function(){
+   var path = window.location.pathname;
+   $(".footer a").removeClass('active');
+
+   if(path.indexOf("sport-list")>0){
+       $(".index-tab").addClass('active');
+   }else if(path.indexOf("coach-list")>0){
+       $(".coach-tab").addClass('active');
+   }else if(path.indexOf("order-list")>0){
+       $(".order-tab").addClass('active');
+   }else{
+       $(".my-tab").addClass('active');
+   }
+}());
+
+

@@ -1,0 +1,63 @@
+body{
+  font-family: "Microsoft YaHei",Î¢ÈíÑÅºÚ,"MicrosoftJhengHei",»ªÎÄÏ¸ºÚ,STHeiti,MingLiu;
+}
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;
+}
+.clearfix {
+  zoom: 1
+}
+.header{
+  height: 140px;
+  text-align: center;
+  background: #000;
+}
+.header img{
+  height: 140px;
+}
+.content{
+  margin-bottom: 72px;
+  overflow-y: scroll;
+}
+.footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #E6E6E6;
+}
+.footer li{
+  width: 25%;
+  float: left;
+  height: 51px;
+  text-align: center;
+}
+.footer a{
+  padding-top: 8px;
+  text-decoration: none;
+  display: block;
+  height: 80px;
+  color: #000;
+  font-size: .9em;
+}
+.footer p{
+  font-weight: bold;
+  font-size: 1.4em;
+}
+.footer .active{
+  background-color: #F15A24;
+  color: #ffffff;
+}
+.fl{
+  float: left;
+}
+.fr{
+  float: right;
+}
+.tl{
+  text-align: left;
+}

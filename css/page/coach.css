@@ -1,0 +1,188 @@
+body{
+    letter-spacing: 1px;
+}
+#loading{
+    display: none;
+}
+.coach-list{
+    padding-top: 5px;
+}
+.coach-list li {
+    height: 93px;
+    width: 95%;
+    margin: 0 auto 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius:3px;
+    background: #F4F4F4;
+    padding-left: 8px;
+    overflow: hidden;
+}
+.coach-list  .photo {
+    position: relative;
+    margin-top: 10px;
+}
+.middle {
+    margin-left: 84px;
+    height: 100%;
+    color: #000000;
+}
+.right {
+    width: 85px;
+    height: 100%;
+    color: #393939;
+}
+.pic {
+    position: absolute;
+    width: 70px;
+}
+.bubble {
+    position: absolute;
+    width: 70px;
+}
+.middle .title {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 12.37px;
+}
+.gender{
+    margin-left: 10px;
+}
+.desc{
+    word-wrap: break-word;
+    font-size: 10.31px;
+}
+.categories{
+    color: #818181;
+    font-size: 8.25px;
+    margin-top: 8px;
+}
+.order-count{
+    color: #F0490C;
+    margin-top: 9px;
+    font-weight: bold;
+    font-size: 10.31px;
+}
+.right p{
+    line-height: 1.7em;
+    margin-left: 12px;
+}
+.info-panel{
+    height: 93px;
+}
+.position{
+    font-size: 10.31px;
+    margin-top: 11px;
+}
+.distance{
+    font-size: 10.31px;
+    margin-top: 5px;
+}
+.icon-svgicon-16{
+    color:#393939
+}
+.right p span{
+    margin-right: 7px;
+}
+.panel{
+    width: 95%;
+    margin: 5px auto 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #F4F4F4;
+    padding-left: 8px;
+    overflow: hidden;
+}
+.info-panel .middle{
+    margin-left: 100px;
+}
+.info-panel .photo{
+    position: relative;
+    margin-top: 10px;
+}
+.info-panel .middle p{
+    line-height: 25px;
+}
+.description,.comment,.sport-label{
+    height: 33px;
+    line-height: 33px;
+    background: #F4F4F4;
+    font-size: 12.37px;
+}
+.icon-svgicon-08,.icon-svgicon-13{
+    margin-right: 7px;
+}
+.icon-svgicon-10{
+    margin-right: 3px;
+}
+.comment-rate{
+    float: right;
+    color: #F0490C;
+    margin-right: 8px;
+}
+.slide-up-down{
+    float: right;
+    margin-right: 8px;
+}
+.description-content {
+    color: #333333;
+    text-indent: 24.74px;
+    font-size: 12.37px;
+    line-height: 20px;
+    padding: 8px 18px 0;
+}
+.sport-list .right {
+    width: 85px;
+    height: 100%;
+    background: #F9F9F9;
+}
+.sport-list .time{
+    margin-top: 32px;
+    font-size: 13px;
+}
+.order-area{
+    height: 60px;
+    position: fixed;
+    line-height: 60px;
+    background: #F4F4F4;
+    padding-left: 17px;
+    width: 100%;
+    bottom: 0;
+    color: #333333;
+}
+#order-btn{
+    float: right;
+    color: #ffffff;
+    margin-right: 17px;
+    padding: 0 24px;
+    letter-spacing: 2px;
+}
+#order-btn b{
+    margin-right: 2px;
+}
+.order-inactive{
+    background-color: #808080;
+}
+.order-active{
+     background-color: #F0490C;
+}
+#coach-detail .title{
+    font-size: 13.37px;
+    margin-top: 16px;
+}
+#coach-detail .order-count{
+    margin-top: 14px;
+    font-size: 15.46px;
+}
+#coach-detail .right{
+    width: 95px;;
+}
+.icon--23{
+    font-size: 23px;
+    margin-left: 45px;
+    line-height: 50px;
+}
+.icon-chosen{
+    color: #F0490C;
+}

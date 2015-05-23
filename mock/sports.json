@@ -1,13 +1,13 @@
 [
   {
-    "created_at": "2015-05-01T03:08:39Z",
-    "duration": 30,
-    "id": 1,
-    "name": "办公室瑜伽",
-    "price": 128,
-    "updated_at": "2015-05-01T03:08:39Z",
-    "head_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff"
-  },
+  "created_at": "2015-05-01T03:08:39Z",
+  "duration": 30,
+  "id": 1,
+  "name": "办公室瑜伽",
+  "price": 128,
+  "updated_at": "2015-05-01T03:08:39Z",
+  "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/office_yoga_head.jpg?imageView2/1/w/140/h/140"
+},
   {
     "created_at": "2015-05-01T03:08:39Z",
     "duration": 120,
@@ -15,16 +15,16 @@
     "name": "家庭瑜伽",
     "price": 258,
     "updated_at": "2015-05-01T03:08:39Z",
-    "head_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff"
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/home_yoga_head.jpg?imageView2/1/w/140/h/140"
   },
   {
     "created_at": "2015-05-01T03:08:39Z",
     "duration": 60,
     "id": 3,
-    "name": "瑜伽私教",
+    "name": "办公室肩颈保健",
     "price": 158,
     "updated_at": "2015-05-01T03:08:39Z",
-    "head_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff"
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/office_shoulder_nect_head.jpg?imageView2/1/w/140/h/140"
   },
   {
     "created_at": "2015-05-01T03:08:39Z",
@@ -33,6 +33,78 @@
     "name": "器械健美",
     "price": 248,
     "updated_at": "2015-05-01T03:08:39Z",
-    "head_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff"
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/instrument_head.jpg?imageView2/1/w/140/h/140"
+  },
+  {
+    "created_at": "2015-05-01T03:08:39Z",
+    "duration": 30,
+    "id": 1,
+    "name": "办公室瑜伽",
+    "price": 128,
+    "updated_at": "2015-05-01T03:08:39Z",
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/office_yoga_head.jpg?imageView2/1/w/140/h/140"
+  },
+  {
+    "created_at": "2015-05-01T03:08:39Z",
+    "duration": 120,
+    "id": 2,
+    "name": "家庭瑜伽",
+    "price": 258,
+    "updated_at": "2015-05-01T03:08:39Z",
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/home_yoga_head.jpg?imageView2/1/w/140/h/140"
+  },
+  {
+    "created_at": "2015-05-01T03:08:39Z",
+    "duration": 60,
+    "id": 3,
+    "name": "瑜伽私教",
+    "price": 158,
+    "updated_at": "2015-05-01T03:08:39Z",
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/home_yoga_head.jpg?imageView2/1/w/140/h/140"
+  },
+  {
+    "created_at": "2015-05-01T03:08:39Z",
+    "duration": 60,
+    "id": 4,
+    "name": "器械健美",
+    "price": 248,
+    "updated_at": "2015-05-01T03:08:39Z",
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/instrument_head.jpg?imageView2/1/w/140/h/140"
+  },
+  {
+    "created_at": "2015-05-01T03:08:39Z",
+    "duration": 30,
+    "id": 1,
+    "name": "办公室瑜伽",
+    "price": 128,
+    "updated_at": "2015-05-01T03:08:39Z",
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/office_yoga_head.jpg?imageView2/1/w/140/h/140"
+  },
+  {
+    "created_at": "2015-05-01T03:08:39Z",
+    "duration": 120,
+    "id": 2,
+    "name": "家庭瑜伽",
+    "price": 258,
+    "updated_at": "2015-05-01T03:08:39Z",
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/home_yoga_head.jpg?imageView2/1/w/140/h/140"
+  },
+  {
+    "created_at": "2015-05-01T03:08:39Z",
+    "duration": 60,
+    "id": 3,
+    "name": "瑜伽私教",
+    "price": 158,
+    "updated_at": "2015-05-01T03:08:39Z",
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/home_yoga_head.jpg?imageView2/1/w/140/h/140"
+  },
+  {
+    "created_at": "2015-05-01T03:08:39Z",
+    "duration": 60,
+    "id": 4,
+    "name": "器械健美",
+    "price": 248,
+    "updated_at": "2015-05-01T03:08:39Z",
+    "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/instrument_head.jpg?imageView2/1/w/140/h/140"
   }
 ]

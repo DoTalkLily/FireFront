@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <title>项目详情</title>
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/font.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/page/sport.css">
+</head>
+<body>
+    <div id="sport-detail"></div>
+    <div class="order-area-placeholder"></div>
+    <div class="order-area">
+        <div>
+            <p>总时长：<span id="totalTime">0</span>分钟</p>
+            <p class="expense">总计：￥<span id="totalExpense">0</span>元</p>
+        </div>
+        <a href="register.html" id="order-btn" class="order-inactive"><b>+</b>预约下单</a>
+    </div>
+<script id="template" type="x-tmpl-mustache">
+    <div class="info-panel panel">
+        <div class="photo fl">
+              <img src="{{head_image_url}}" class="pic"/>
+              <img src="../image/bubble.png" class="bubble"/>
+        </div>
+        <div class="right fr detail">
+             <p class="expense">￥<span id="expense">{{price}}元</span></p>
+             <p class="time"><span class="icon-svgicon-10 time-tag"></span><span id="time">{{duration}}</span><span>分钟</span></p>
+        </div>
+        <div class="middle">
+              <p class="title">{{name}}</p>
+              <p class="suggest">建议人数:{{countLimit}}</p>
+        </div>
+    </div>
+    <div class="purchase panel" id="purchase-num">
+         <span class="icon-svgicon-17 icon-tag"></span>购买数量
+         <div class="fr">
+            <b id="delete">-</b><span id="count" class="order-count">0</span><b id="add">+</b>
+         </div>
+    </div>
+    <div class="description panel">
+        <span class="icon-svgicon-11 icon-tag"></span>课程简介<span class="slide-up-down retract">收起</span>
+    </div>
+    <div class="description-content">
+        {{description}}
+        {{#detail_image_urls}}
+        <div class="desc-img"><img src="{{.}}"/></div>
+        {{/detail_image_urls}}
+    </div>
+</script>
+<script src="../js/common/jquery-2.1.3.min.js"></script>
+<script src="../js/common/mustache.min.js"></script>
+<script src="../js/common/utils.js"></script>
+<script src="../js/page/sport.js"></script>
+</body>
+</html>

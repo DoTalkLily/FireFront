@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta http-equiv="X-UA-Compatible" content="edge" />
+    <title>项目</title>
+    <link rel="stylesheet" href="../css/common/reset.css">
+    <link rel="stylesheet" href="../css/common/font.css">
+    <link rel="stylesheet" href="../css/common/common.css">
+    <link rel="stylesheet" href="../css/page/sport.css">
+</head>
+<body>
+  <div class="header">
+      <img src="../image/sport-list-header.jpg">
+  </div>
+  <div class="content">
+      <ul id="sport-list" class="sport-list"></ul>
+  </div>
+  <div class="footer">
+      <ul class="clearfix">
+          <li><a href="sport-list.html" class="index-tab active"><p class="icon--01"></p>首页</a></li>
+          <li><a href="coach-list.html" class="coach-tab"><p class="icon--02"></p>教练</a></li>
+          <li><a href="order-list.html" class="order-tab"><p class="icon--03"></p>订单</a></li>
+          <li><a href="personal.html" class="my-tab"><p class="icon--04"></p>我的</a></li>
+      </ul>
+  </div>
+<script id="template" type="x-tmpl-mustache">
+      <li>
+          <a href="sport-detail.html?id={{id}}">
+              <div class="photo fl">
+                  <img src="{{head_image_url}}" class="pic"/>
+                  <img src="../image/bubble.png" class="bubble"/>
+              </div>
+              <div class="middle fl">
+                  <p class="title">{{name}}</p>
+                  <p class="time"><span class="icon-svgicon-10"></span>时间：{{duration}}分钟</p>
+              </div>
+              <div class="right fr">
+                  <p class="price">￥{{price}} 元</p>
+                  <p class="order"><span class="icon-svgicon-21"></span>立刻预约</p>
+              </div>
+          </a>
+      </li>
+</script>
+<script src="../js/common/zepto.js"></script>
+  <script src="../js/common/mustache.min.js"></script>
+<script src="../js/common/utils.js"></script>
+<script src="../js/page/sport.js"></script>
+</body>
+</html>

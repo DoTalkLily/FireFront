@@ -1,0 +1,32 @@
+.my a,.phone{
+    width: 94%;
+    margin: 5px auto 5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #F4F4F4;
+    padding-left: 8px;
+    overflow: hidden;
+    height: 34px;
+    line-height: 34px;
+    background: #F4F4F4;
+    display: block;
+    padding-right: 8px;
+    color: #000000;
+    font-size: 13px;
+}
+.my a .arrow{
+    float: right;
+    color: #B2B2B2;
+    line-height: 34px;
+}
+.phone{
+    position: fixed;
+    bottom: 55px;
+    color: #F0490C;
+    text-align: center;
+    left: 2px;
+}
+.icon-svgicon-17,.icon-svgicon-11{
+    margin-right: 5px;
+}

@@ -1,0 +1,47 @@
+/* 下单步骤 */
+.step-bar {
+  height: 64px;
+  margin: 0 11px;
+  text-align: center;
+}
+
+.step-item {
+  display: inline-block;
+  margin-top: 17px;
+}
+
+.step-num {
+  display: inline-block;
+  width: 27px;
+  height: 23px;
+  font-size: 12px;
+  line-height: 23px;
+  color: #ffffff;
+  background: url(../../image/step.png) no-repeat center center / 21px 18px;
+}
+
+.step-light .step-num {
+  background: url(../../image/step-light.png) no-repeat center center / 27px 23px;
+}
+
+.step-word {
+  margin-top: 2px;
+  font-size: 9px;
+  text-align: center;
+  color: #cccccc;
+}
+
+.step-light .step-word {
+  color: #f15a24;
+}
+
+.step-line {
+  width: 32.81%;
+  height: 2px;
+  background-color: #cccccc;
+  vertical-align: 26px;
+}
+
+.step-light.step-line {
+  background-color: #f15a24;
+}

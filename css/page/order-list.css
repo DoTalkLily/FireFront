@@ -1,0 +1,207 @@
+.order-list{
+    padding-top: 5px;
+    /*background: #ff0000;*/
+}
+.order-list li{
+    height: 93px;
+    width: 95%;
+    margin: 0 auto 5px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background: #F4F4F4;
+    padding-left: 8px;
+    overflow: hidden;
+}
+.order-list .photo{
+    position:relative;
+    margin-top: 10px;
+}
+.pic{
+    position: absolute;
+    width: 70px;
+}
+.bubble{
+    position: absolute;
+    width: 70px;
+}
+.middle{
+    margin-left: 86px;
+    height: 100%;
+    color: #000000;
+}
+.right{
+    width: 85px;
+    height: 100%;
+    background: #F9F9F9;
+    position: relative;
+}
+.middle .title{
+    margin-top: 10px;
+    font-size: 12px;
+}
+.middle .subtitle {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 12px;
+}
+.middle .time{
+    margin-top: 15px;
+    font-size: 10px;
+    color: #333333;
+}
+.status-pay {
+    font-size: 12px;
+    color: #f15a24;
+    margin-top: 10px;
+}
+.status-unpay {
+    font-size: 12px;
+    color: #1a1a1a;
+    margin-top: 10px;
+}
+.price{
+    color: #b3b3b3;
+    font-size: 9px;
+}
+.order{
+    position: absolute;
+    font-size: 10px;
+    color:#333333;
+    left: 12px;
+    bottom: 10px;
+}
+.panel {
+    width: 95%;
+    margin: 0 auto 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    background: #F4F4F4;
+    padding-left: 8px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+.info-panel {
+    height: 93px;
+}
+.info-panel .photo {
+    position: relative;
+    margin-top: 10px;
+}
+.expense{
+    color: #F0490C;
+    margin-top: 8px;
+    font-weight: bold;
+}
+.right p {
+    line-height: 1.4em;
+    margin-left: 12px;
+}
+#sport-detail .middle{
+    margin-left: 85px;
+}
+.suggest{
+    font-size: .9em;
+    margin-top: 13px;
+}
+#sport-detail .time{
+    margin-top: 15px;
+    font-size: .9em;
+}
+#sport-detail .right{
+    background: none;
+}
+#sport-detail .title{
+    margin-top: 8px;
+}
+.purchase{
+    height: 33px;
+    line-height: 33px;
+    background: #F4F4F4;
+}
+#add,#delete{
+    color: #F0490C;
+    vertical-align: top;
+    font-size: 1.6em;
+}
+#add{
+    margin-right: 8px;
+}
+.order-count{
+    display: inline-block;
+    border: 2px solid #F0490C;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: #ffffff;
+    padding: 2px;
+}
+.description{
+    height: 33px;
+    line-height: 33px;
+    background: #F4F4F4;
+}
+.slide-up-down {
+    float: right;
+    margin-right: 8px;
+}
+.extend {
+}
+.retract{
+}
+.description-content {
+    color: #333333;
+    padding-right: 8px;
+    text-indent: 2em;
+    padding-left: 8px;
+}
+.desc-img {
+    text-indent: 0;
+}
+.desc-img img {
+    width: 100%;
+}
+.order-area-placeholder {
+    height: 50px;
+}
+.order-area {
+    height: 50px;
+    position: fixed;
+    line-height: 50px;
+    background: #F4F4F4;
+    padding-left: 17px;
+    width: 100%;
+    bottom: 0;
+    color: #333333;
+}
+#order-btn {
+    float: right;
+    color: #ffffff;
+    margin-right: 17px;
+    padding: 0 17px;
+}
+.order-inactive {
+    background-color: #808080;
+}
+.order-active{
+    background-color: #F0490C;
+}
+.order-area .expense{
+    color:#F0490C
+}
+.order-area div{
+    float: left;
+    margin-top: 7px;
+}
+.order-area div p{
+    font-size: .9em;
+    line-height: 1em;
+}
+.icon-svgicon-10,.icon-svgicon-07{
+    font-weight: bold;
+    margin-right: 2px;
+}

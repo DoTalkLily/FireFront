@@ -2,24 +2,36 @@
  * Created by li.lli on 2015/4/18.
  */
 $(function () {
-    var COACH_LIST_URL = "mock/coaches.json",
-        COACH_DETAIL_URL = "mock/coach-detail.json",
+    var COACH_LIST_URL = "../mock/coaches.json",
+        COACH_DETAIL_URL = "../mock/coach-detail.json",
         PAGE_SIZE = 10;
-
+    var pageIndex = 0;
     var coachList = $("#coach-list"),
         coachDetail = $("#coach-detail"),
         template = $("#template"),
-        loading = $("#loading")
-        sportTemplate = $("#sport-template");
+        loading = $("#loading"),
+        sportTemplate = $("#sport-template"),
+        orderBtn = $('#order-btn'),
+        orderTip = $(".order-tip");
     $("#order-btn").on('click', submitOrder);//预约下单按钮
     //教练列表页面
     if(coachList&&coachList.length){
-        getCoachList(0);
+        getCoachList(pageIndex);
     }
     //详情页面
     if(coachDetail && coachDetail.length){
         getCoachDetail();
     }
+    //到底部加载下一页
+    $(window).scroll(function(){
+        var scrollTop = $(this).scrollTop();
+        var scrollHeight = $(document).height();
+        var windowHeight = $(this).height();
+        if(scrollTop + windowHeight == scrollHeight){
+            pageIndex += 1;
+            getCoachList(pageIndex);
+        }
+    });
 
     function getCoachList(pageIndex){
         loading.show();
@@ -42,7 +54,7 @@ $(function () {
                 }
                 Mustache.parse(template.html());
                 for ( i=0 ; i < len; i += 1) {
-                    result[i].description = trim(result[i].description,20);//简介缩减
+                    result[i].description = trim(result[i].description,17);//简介缩减
                     arr.push(Mustache.render(template.html(),result[i]));
                 }
                 coachList.append(arr.join(' '));
@@ -55,7 +67,7 @@ $(function () {
             return;
         }
         $.get(
-            COACH_DETAIL_URL,{ id : id },
+            COACH_DETAIL_URL,
             function (result) {
                 if (result.error_code) {
                     new Toast({context:$('body'),message:result.error}).show();
@@ -70,9 +82,36 @@ $(function () {
                 coachDetail.append(Mustache.render(template.html(),result));
                 var i,len = result.sports.length,arr=[];
                 for ( i=0 ; i < len; i += 1) {
-                    arr.push(Mustache.render(sportTemplate.html(),result.sports[i]));
+                    arr.push(Mustache.render(sportTemplate.html().trim(),result.sports[i]));
                 }
-                $("#sports").append(arr.join(' '));
+                $("#sports-list").append(arr.join(''));
+                //教练简介、展开收起事件
+                $(".slide-up-down").on('click',function(){
+                     if($(this).hasClass('extend')){
+                         $(this).removeClass('extend').addClass('retract');
+                         $(".description-content").slideUp().show();
+                         $(this).html("收起");
+                     }else{
+                         $(this).removeClass('retract').addClass('extend');
+                         $(".description-content").slideDown().hide();
+                         $(this).html("展开");
+                     }
+                });
+                orderBtn.on('click',submitOrder);
+                $(".icon-chose").on('click',function(){
+                    if($(this).hasClass('icon-chosen')){
+                        $(this).removeClass('icon-chosen');
+                    }else{
+                        $(this).addClass('icon-chosen');
+                    }
+                    if($('.icon-chosen').length > 0){
+                        orderBtn.addClass('order-active');
+                        orderTip.html("教练+课程已选");
+                    }else{
+                        orderBtn.removeClass('order-active');
+                        orderTip.html("请选择课程");
+                    }
+                });
             }
         );
     }

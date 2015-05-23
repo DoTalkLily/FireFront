@@ -4,41 +4,43 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>燃点</title>
-	<link rel="stylesheet" href="css/common/jquery.mobile-1.4.5.min.css">
+    <link rel="stylesheet" href="css/common/reset.css">
     <link rel="stylesheet" href="css/coach.css">
 </head>
 <div>
-  <div data-role="page" ng-app="coach" ng-controller="getCoachList">
-          <ul data-role="listview" data-inset="true" id="coach-list">
-          <li  ng-repeat="coach in coaches">
-                      <a href="coach-detail.html?id={{coach.id}}" data-ajax="false" data-transition="slide">
-                      <img ng-src="{{coach.profile_image_url}}"/>
-                      <span>{{coach.name}}</span>
-                      <span class="gender">{{getGender(coach.sex)}}</span>
-                      <span class="position">{{coach.distance}}公里</span><br/>
-                      <span>{{coach.order_num}}单</span>
-                      <span class="position">位置：<span>{{coach.available_areas}}</span></span><br/>
-                      <span ng-repeat="category in coach.categories">{{category.name}}</span>
-                      <span class="description">{{trimDescription(coach.description)}}</span>
-                  </a>
-          </li>
+      <div data-role="page">
+          <ul id="coach-list">
           </ul>
+          <div id="loading">加载中……</div>
       </div>
-      <div data-role="footer" data-position="fixed">
-           <div data-role="navbar">
+      <div>
+           <div>
               <ul>
-                <li><a href="index.html" data-icon="home" >首页</a></li>
-                <li><a href="coach-list.html" data-icon="eye" class="ui-btn-active">教练</a></li>
-                <li><a href="#" data-icon="bullets">订单</a></li>
-                <li><a href="#" data-icon="user">我的</a></li>
+                <li><a href="index.html">首页</a></li>
+                <li><a href="coach-list.html">教练</a></li>
+                <li><a href="#">订单</a></li>
+                <li><a href="#">我的</a></li>
               </ul>
           </div>
       </div>
   </div>
+<script id="template" type="x-tmpl-mustache">
+    <li>
+        <a href="coach-detail.html?id={{id}}">
+            <img src="{{profile_image_url}}"/>
+            <span>{{name}}</span>
+            <span class="gender">{{sex}}</span>
+            <span class="position">{{distance}}公里</span><br/>
+            <span>{{order_num}}单</span>
+            <span class="position">位置：<span>{{available_areas}}</span></span><br/>
+            <span>{{#categories}}{{name}} {{/categories}}</span>
+            <span class="description">{{description}}</span>
+        </a>
+    </li>
+</script>
 <script src="js/common/jquery-2.1.3.min.js"></script>
-<script src="js/common/jquery.mobile-1.4.5.min.js"></script>
-<script src="js/common/angular.min.js"></script>
-<script src="js/common/angular-route.min.js"></script>
+<script src="js/common/mustache.min.js"></script>
+<script src="js/common/utils.js"></script>
 <script src="js/coach.js"></script>
 </body>
 </html>

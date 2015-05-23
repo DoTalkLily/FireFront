@@ -7,9 +7,9 @@
   "name": "张三",
   "order_num": 20,
   "positive_reputation": "90%",
-  "profile_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff",
+  "profile_image_url": "http://7xj017.com1.z0.glb.clouddn.com/yoga_coach.jpg?imageView2/1/w/140/h/140",
   "reputation_num": 19,
-  "sex": 1,
+  "sex": "女",
   "updated_at": "2015-04-27T14:15:16Z",
   "verified": "瑜伽二级教练 健身我也会",
   "categories": [
@@ -22,21 +22,21 @@
       "duration": 30,
       "id": 1,
       "name": "办公室瑜伽",
-      "head_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff",
+      "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/office_yoga_head.jpg?imageView2/1/w/140/h/140",
       "coach_price": "140.8"
     },
     {
       "duration": 120,
       "id": 2,
       "name": "家庭瑜伽",
-      "head_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff",
+      "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/home_yoga_head.jpg?imageView2/1/w/140/h/140",
       "coach_price": "283.8"
     },
     {
       "duration": 60,
       "id": 3,
       "name": "瑜伽私教",
-      "head_image_url": "https://avatar.tower.im/d3ffcd6b186e4c07b4594e5e559bfdff",
+      "head_image_url": "http://7xj017.com1.z0.glb.clouddn.com/home_yoga_head.jpg?imageView2/1/w/140/h/140",
       "coach_price": "173.8"
     }
   ],

@@ -1,0 +1,141 @@
+@import url("../module/order-step.css");
+@import url("../module/order-bottom.css");
+
+/* 表单区域 */
+.form {
+  margin: 0 5px;
+}
+
+.form-h1 {
+  margin-top: 2px;
+  padding-left: 9px;
+  height: 34px;
+  line-height: 34px;
+  background-color: #f4f4f4;
+  border-radius: 3px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.form-label {
+  font-size: 12px;
+  width: 70px;
+  float: left;
+  text-align: right;
+  color: #333333;
+}
+
+.form-content {
+  margin-left: 70px;
+  line-height: 32px;
+}
+
+.form-block {
+  margin-top: 5px;
+  background-color: #f4f4f4;
+  padding: 8px 8px 11px;
+  border-radius: 3px;
+}
+
+.form-block-field {
+  border-top: 1px solid #dfdfdf;
+  padding: 6px 0 7px;
+}
+
+.form-block-field-first {
+  border-top: none;
+}
+
+.form-block-label {
+  font-size: 12px;
+  width: 62px;
+  float: left;
+  text-align: right;
+  color: #333333;
+}
+
+.form-block-content {
+  margin-left: 69px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.form-block-content-area {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #333333;
+}
+
+.form-content-tip {
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+.form-em {
+  color: #f15a24;
+}
+
+.project-item {
+  margin-top: 5px;
+  height: 93px;
+  background-color: #f4f4f4;
+  border-radius: 3px;
+}
+
+.project-avatar {
+  float: left;
+  width: 70px;
+  height: 72px;
+  margin: 10px 0 0 9px;
+  position: relative;
+}
+
+.project-pic {
+  position: absolute;
+  width: 70px;
+}
+
+.project-frame {
+  position: absolute;
+  width: 70px;
+}
+
+.project-main {
+  margin-left: 104px;
+}
+
+.project-main-top {
+  padding-top: 9px;
+}
+
+.project-main-right {
+  float: right;
+  width: 76px;
+}
+
+.project-price {
+  font-size: 12px;
+  color: #f15a24;
+}
+
+.project-originprice {
+  font-size: 10px;
+  color: #b3b3b3;
+}
+
+.project-title {
+  font-size: 12px;
+}
+
+.project-sub {
+  font-size: 10px;
+  margin-top: 4px;
+}
+
+.project-main-bottom {
+  margin-top: 26px;
+  height: 13px;
+  line-height: 13px;
+  font-size: 10px;
+  color: #333333;
+}
