@@ -2,13 +2,17 @@
  * Created by li.lli on 2015/4/30.
  */
 $(function(){
-    var REGISTER_URL = "../mock/register.json",//注册页面数据ajax url
+    var REGISTER_URL = "/users/signup",//注册页面数据ajax url
         INDEX_URL = "index.html",//首页url
-        VERYFY_URL = "../mock/verify.json";//发送验证码url
+        VERYFY_URL = "/users/smscode";//发送验证码url
     var MOBILE_RULE = new RegExp("^((13[0-9])|(15[^4,\\D])|(17[0-9])|(18[0-9]))\\d{8}$");//手机号正则表达式
 
     var mobileEle = $('#telephone'),
         verifyCodeEle = $('#verify-code');
+
+    var openid;
+    var originalPath;
+    getRegisterHeaders();
 
     $("#register-btn").on('click',register);
     $("#verifycode-btn").on('click',sendVerifyCode);
@@ -49,14 +53,14 @@ $(function(){
             {
                 "mobile": mobileEle.val(),
                 "sms_code": verifyCodeEle.val(),
-                "openid": getOpenid()
+                "openid": openid
             },
             function (result) {
                 if (result.error_code) {
                     new Toast({context:$('body'),message:result.error}).show();
                     return false;
                 }
-                window.location.href = INDEX_URL;
+                window.location.href = originalPath;
             }, "json");
         return false;
     }
@@ -84,5 +88,16 @@ $(function(){
             $("#verifycode-btn").off();
             time()
         }
+    }
+
+    function getRegisterHeaders(){
+        $.ajax({
+            type: 'HEAD',
+            url: window.location.href,
+            complete: function(xhr) {
+                openid = xhr.getResponseHeader('Randian-Open-Id');
+                originalPath = xhr.getResponseHeader('Randian-Original-Path');
+            }
+        });
     }
 }());

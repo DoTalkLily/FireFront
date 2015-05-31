@@ -38,9 +38,9 @@ Toast.prototype = {
         msgDIV.push('</div>');
         this.msgEntity = $(msgDIV.join('')).appendTo(this.context);
         //设置消息样式
-        var left = this.left == null ? this.context.width()/2-this.msgEntity.find('span').width()/2 : this.left;
-        var top = this.top == null ? this.context.height()/2-this.msgEntity.find('span').height()/2  : this.top;
-        this.msgEntity.css({position:'absolute',top:top,'z-index':'99',left:left,'background-color':'black',color:'white','font-size':'18px',padding:'10px',margin:'10px'});
+        var left = (this.left == null) ? (this.context.width()/2-this.msgEntity.find('span').width()/2) : this.left;
+        var top = (this.top == null) ? (this.context.height()/2-this.msgEntity.find('span').height()/2) : this.top;
+        this.msgEntity.css({position:'absolute',top:top,'z-index':'99',left:left,'background-color':'#000000',color:'white','font-size':'16px',padding:'10px',margin:'10px'});
         this.msgEntity.hide();
     },
     //显示动画
@@ -48,17 +48,18 @@ Toast.prototype = {
         this.msgEntity.fadeIn(this.time/2);
         this.msgEntity.fadeOut(this.time/2);
     }
-}
+};
+
 //菜单tab切换效果
 $(function(){
    var path = window.location.pathname;
    $(".footer a").removeClass('active');
 
-   if(path.indexOf("sport-list")>0){
+   if(path.indexOf("sport_list")>0){
        $(".index-tab").addClass('active');
-   }else if(path.indexOf("coach-list")>0){
+   }else if(path.indexOf("coach_list")>0){
        $(".coach-tab").addClass('active');
-   }else if(path.indexOf("order-list")>0){
+   }else if(path.indexOf("order_list")>0){
        $(".order-tab").addClass('active');
    }else{
        $(".my-tab").addClass('active');

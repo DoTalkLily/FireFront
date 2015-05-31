@@ -32,7 +32,6 @@
   line-height: 40px;
   font-size: 10px;
   text-align: center;
-  margin: 0 -4px;
 }
 
 .date-item-light {
@@ -76,9 +75,21 @@
   background: url("../../image/pebble_dot.png") no-repeat center center / 39px 40px;
 }
 
+/*时间展示*/
+.time-show {
+  font-size: 14px;
+  border: 1px solid #f15a24;
+  border-radius: 25px;
+  text-align: center;
+  width: 70%;
+  height: 45px;
+  line-height: 45px;
+  margin: 40px auto 0;
+}
+
 /*教练选择*/
 .coach-list {
-  margin: 1px 5px 10px;
+  margin: 30px 5px 10px;
 }
 
 .coach-item {

@@ -2,7 +2,7 @@
  * Created by li.lli on 2015/4/18.
  */
 $(function () {
-    var ORDER_LIST_URL = "../mock/orders.json",
+    var ORDER_LIST_URL = "/orders.json",
         PAGE_SIZE = 10;
     var pageIndex = 0;
     var orderList = $("#order-list"),
@@ -16,8 +16,9 @@ $(function () {
         var scrollHeight = $(document).height();
         var windowHeight = $(this).height();
         if(scrollTop + windowHeight == scrollHeight){
-            pageIndex += 1;
-            getOrderList(pageIndex);
+            if(pageIndex > 0){
+                getOrderList(pageIndex);
+            }
         }
     });
 
@@ -38,6 +39,7 @@ $(function () {
                     new Toast({context: $('body'), message: "暂无订单"}).show();
                     return;
                 }
+                pageIndex = (len < PAGE_SIZE)?-1: pageIndex+PAGE_SIZE ;
                 Mustache.parse(template.html());
                 for ( i=0 ; i < len; i += 1) {
                     result[i].description = trim(result[i].description,17);//简介缩减

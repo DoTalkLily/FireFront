@@ -21,47 +21,42 @@
   <li class="step-item step-line"></li>
   <li class="step-item"><div class="step"><div class="step-num">3</div><div class="step-word">确认</div></div></li>
 </ul>
-<div class="form">
+<div id="form" class="form">
 
-  <div class="form-block">
-    <div class="form-block-field form-block-field-first">
-      <label class="form-block-label">联&nbsp;系&nbsp;人：</label>
-      <div class="form-block-content"><input class="form-input-nobg"></div>
-    </div>
-    <div class="form-block-field">
-      <label class="form-block-label">手&nbsp;机&nbsp;号：</label>
-      <div class="form-block-content"><input class="form-input-nobg"></div>
-    </div>
-    <div class="form-block-field">
-      <label class="form-block-label">性&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;别：</label>
-      <div class="form-block-content"><input class="form-input-nobg"></div>
-    </div>
-    <div class="form-block-field">
-      <label class="form-block-label">区&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;域：</label>
-      <div class="form-block-content"><input class="form-input-nobg"></div>
-    </div>
-    <div class="form-block-field">
-      <label class="form-block-label">详细地址：</label>
-      <div class="form-block-content"><input class="form-input-nobg"></div>
-    </div>
-    <div class="form-block-field">
-      <label class="form-block-label">备注信息：</label>
-      <div class="form-block-content"><input class="form-input-nobg" placeholder="（选填）"></div>
-    </div>
-    <div class="form-remark">如果地址是多选，请留下相应联系方式。</div>
-  </div>
-  <!--<div class="form-line form-add-place">
-    <span class="form-em">+</span>添加常用锻炼场地
-  </div>-->
 </div>
 <div class="form-bottom-placehoder"></div>
 <div class="form-bottom">
-  <a class="form-bottom-btn" href="order2.html"><i>+</i>下一步</a>
+  <a id="form-bottom-btn" class="form-bottom-btn" href="javascript:;"><i>+</i>下一步</a>
   <div class="form-bottom-info">信息填写完成！</div>
 </div>
 
+<script id="form-template" type="x-tmpl-mustache">
+  <div class="form-block">
+    <div class="form-block-field form-block-field-first">
+      <label class="form-block-label">联&nbsp;系&nbsp;人：</label>
+      <div class="form-block-content"><input id="form-name" class="form-input-nobg" value="{{consignee_name}}"></div>
+    </div>
+    <div class="form-block-field">
+      <label class="form-block-label">手&nbsp;机&nbsp;号：</label>
+      <div class="form-block-content"><input id="form-mobile" class="form-input-nobg" value="{{consignee_mobile}}"></div>
+    </div>
+    <div class="form-block-field">
+      <label class="form-block-label">详细地址：</label>
+      <div class="form-block-content"><input id="form-address" class="form-input-nobg" value="{{consignee_address}}"></div>
+    </div>
+    <div class="form-block-field">
+      <label class="form-block-label">备注信息：</label>
+      <div class="form-block-content"><input id="form-comment" class="form-input-nobg" placeholder="（选填）"></div>
+    </div>
+    <div class="form-remark">如果地址是多选，请留下相应联系方式。</div>
+  </div>
+</script>
+
 <script src="../js/common/zepto.js"></script>
+<script src="../js/common/Class.js"></script>
 <script src="../js/common/mustache.min.js"></script>
 <script src="../js/common/utils.js"></script>
+<script src="../js/common/store.js"></script>
+<script src="../js/page/order1.js"></script>
 </body>
 </html>

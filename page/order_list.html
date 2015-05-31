@@ -23,10 +23,10 @@
 </div>
 <div class="footer">
   <ul class="clearfix">
-    <li><a href="sport-list.html" class="index-tab active"><p class="icon--01"></p>首页</a></li>
-    <li><a href="coach-list.html" class="coach-tab"><p class="icon--02"></p>教练</a></li>
-    <li><a href="order-list.html" class="order-tab"><p class="icon--03"></p>订单</a></li>
-    <li><a href="personal.html" class="my-tab"><p class="icon--04"></p>我的</a></li>
+    <li><a href="sport_list" class="index-tab active"><p class="icon--01"></p>首页</a></li>
+    <li><a href="coach_list" class="coach-tab"><p class="icon--02"></p>教练</a></li>
+    <li><a href="order_list" class="order-tab"><p class="icon--03"></p>订单</a></li>
+    <li><a href="personal" class="my-tab"><p class="icon--04"></p>我的</a></li>
   </ul>
 </div>
 <script id="template" type="x-tmpl-mustache">
@@ -41,8 +41,8 @@
             <p class="time"><span class="icon-svgicon-10"></span>{{sport_start_time}}</p>
           </div>
           <div class="right fr">
-            <p class="status-pay">{{status}}</p>
-            <p class="price">课时费：{{order_pay_value}}元</p>
+            <p class="status-pay">{{state}}</p>
+            <p class="price">课时费：{{order_pay_fee}}元</p>
             <a class="order" href="#{{id}}"><span class="icon-svgicon-07"></span>再次预约</a>
           </div>
     </li>

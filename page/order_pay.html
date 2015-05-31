@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+  <meta name="format-detection" content="telephone=no"/>
+  <meta http-equiv="X-UA-Compatible" content="edge" />
+  <title>燃点</title>
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/font.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/page/order-pay.css">
+</head>
+<body>
+
+<h2 class="pay-title">燃点付款</h2>
+
+<div id="order">
+<!--<p class="pay-amount">需支付<em>￥98元&nbsp;RMB</em></p>-->
+
+<!--<div class="pay-detail">-->
+  <!--<p><span class="pay-detail-name">收款方</span>：北京燃点时代科技有限公司</p>-->
+  <!--<p><span class="pay-detail-name">商 品</span>：<em>办公室团体健身体验课程&nbsp;&nbsp;&nbsp;x2</em></p>-->
+  <!--<p><span class="pay-detail-name">电 话</span>：010—22795381</p>-->
+  <!--<p><span class="pay-detail-name">地 址</span>：清华大学新林院8号1106室</p>-->
+<!--</div>-->
+
+<!--<div class="call-service">客服电话&nbsp;&nbsp;<a href="tel:4005050888">4005050888</a></div>-->
+</div>
+
+<a class="pay-button" href="order_success">立即支付</a>
+
+<script id="order-template" type="x-tmpl-mustache">
+  <p class="pay-amount">需支付<em>￥{{order_pay_value}}元&nbsp;RMB</em></p>
+
+  <div class="pay-detail">
+    <p><span class="pay-detail-name">收款方</span>：北京燃点时代科技有限公司</p>
+    <p><span class="pay-detail-name">商 品</span>：<em>{{sport_name}}&nbsp;&nbsp;&nbsp;x{{sport_order_num}}</em></p>
+    <p><span class="pay-detail-name">电 话</span>：{{consignee_mobile}}</p>
+    <p><span class="pay-detail-name">地 址</span>：{{consignee_address}}</p>
+  </div>
+
+  <div class="call-service">客服电话&nbsp;&nbsp;<a href="tel:4005050888">4005050888</a></div>
+</script>
+
+<script src="../js/common/zepto.js"></script>
+<script src="../js/common/Class.js"></script>
+<script src="../js/common/mustache.min.js"></script>
+<script src="../js/common/utils.js"></script>
+<script src="../js/common/store.js"></script>
+<script src="../js/page/order_pay.js"></script>
+</body>
+</html>

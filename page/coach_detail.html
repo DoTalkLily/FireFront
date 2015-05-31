@@ -17,7 +17,7 @@
 <div class="content">
     <div id="coach-detail"></div>
     <div class="order-area">
-        <span class="order-tip">请选择课程</span><a href="register.html" id="order-btn" class="order-inactive"><b>+</b>预约下单</a>
+        <span class="order-tip">请选择课程</span><a href="order1" id="order-btn" class="order-inactive"><b>+</b>预约下单</a>
     </div>
 </div>
 <script id="template" type="x-tmpl-mustache">
@@ -51,9 +51,9 @@
     <ul id="sports-list" class="coach-list sport-list"></ul>
 </script>
 <script id="sport-template" type="x-tmpl-mustache">
-  <li>
+  <li class="j-sport" data-id="{{id}}" data-name="{{name}}" data-duration="{{duration}}" data-max_user_num="{{max_user_num}}" data-min_user_num="{{min_user_num}}">
       <div class="photo fl">
-          <img src="{{head_image_url}}" class="pic"/>
+          <img src="{{head_image_url}}" class="j-pic pic"/>
           <img src="../image/bubble.png" class="bubble"/>
       </div>
       <div class="right fr">
@@ -67,8 +67,10 @@
   </li>
 </script>
 <script src="../js/common/jquery-2.1.3.min.js"></script>
+<script src="../js/common/Class.js"></script>
 <script src="../js/common/mustache.min.js"></script>
 <script src="../js/common/utils.js"></script>
-<script src="../js/page/coach.js"></script>
+<script src="../js/common/store.js"></script>
+<script src="../js/page/coach-detail.js"></script>
 </body>
 </html>
